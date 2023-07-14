@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://kit.fontawesome.com/23064d9629.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="css/main.css" />
+		<title>Register</title>
+	</head>
+	<body>
+		<div class="bgc"></div>
+
+		<div class="container">
+			<div class="content">
+				<h2 class="content__title">
+					welcome! <br /><span class="content__span"
+						>we are glad to see you</span
+					>
+				</h2>
+				<p class="content__text">
+					Its's free to join and gain full access to thousands of opportunities
+				</p>
+				<div class="content__icons">
+					<a href="#"><i class="content__icon fa-brands fa-facebook-f"></i></a>
+					<a href="#"><i class="content__icon fa-brands fa-instagram"></i></a>
+					<a href="#"><i class="content__icon fa-brands fa-twitter"></i></a>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="form form__login">
+					<form action="#">
+						<h2 class="form__title">Log In</h2>
+
+						<div class="form__box">
+							<span class="form__icon"
+								><i class="fa-solid fa-envelope"></i
+							></span>
+							<input
+								type="email"
+								class="form__input form__email"
+								placeholder="Email"
+							/>
+							<p class="form__error"></p>
+						</div>
+
+						<div class="form__box">
+							<span class="form__icon"><i class="fa-solid fa-lock"></i></span>
+							<input
+								type="password"
+								class="form__input form__password"
+								placeholder="Password"
+							/>
+							<p class="form__error"></p>
+						</div>
+
+						<div class="form__remember">
+							<label
+								><input class="form__checkbox" type="checkbox" />Remember
+								me</label
+							>
+							<a class="form__remember-link" href="#">Forgot password?</a>
+						</div>
+
+						<button class="form__btn form__login-btn">Sign In</button>
+
+						<div class="form__registers">
+							<p>
+								Don't have an account ?
+								<a href="#" class="form__register-link">Sign Up</a>
+							</p>
+						</div>
+						<p class="form__succes">Succes!</p>
+					</form>
+				</div>
+
+				<div class="form form__register">
+					<form action="#" id="reg">
+						<h2 class="form__title">Create Account</h2>
+
+						<div class="form__box">
+							<span class="form__icon"><i class="fa-solid fa-user"></i></span>
+							<input
+								type="text"
+								class="form__input form__name"
+								placeholder="Name"
+							/>
+							<p class="form__error"></p>
+						</div>
+
+						<div class="form__box">
+							<span class="form__icon"
+								><i class="fa-solid fa-envelope"></i
+							></span>
+							<input
+								type="email"
+								class="form__input form__email"
+								placeholder="Email"
+							/>
+							<p class="form__error"></p>
+						</div>
+
+						<div class="form__box">
+							<span class="form__icon"><i class="fa-solid fa-lock"></i></span>
+							<input
+								type="password"
+								class="form__input form__password"
+								placeholder="Password"
+							/>
+							<p class="form__error"></p>
+						</div>
+
+						<div class="form__remember">
+							<label
+								><input class="form__checkbox" type="checkbox" />I agree to the
+								terms & conditions</label
+							>
+						</div>
+
+						<button class="form__btn form__register-btn">Sign Up</button>
+
+						<div class="form__registers">
+							<p>
+								Already have an account ?
+								<a href="#" class="form__login-link">Sign In</a>
+							</p>
+						</div>
+						<p class="form__succes">Succes!</p>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script src="main.js"></script>
+	</body>
+</html>

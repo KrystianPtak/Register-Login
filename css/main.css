@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.bgc {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../img/big-leaf.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 550px;
+  background: url("../img/small-leaf.jpg") rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  padding-left: 1em;
+  color: #e4e4e4;
+}
+.content__title {
+  margin-bottom: 0.5em;
+  font-size: 6rem;
+  text-transform: capitalize;
+  line-height: 0.6em;
+}
+.content__span {
+  font-size: 2.6rem;
+}
+.content__text {
+  max-width: 300px;
+}
+.content__icons {
+  margin-top: 1em;
+  font-size: 1.8rem;
+}
+.content__icon {
+  padding-right: 0.3em;
+  color: #e4e4e4;
+}
+.content__icon:hover {
+  color: rgba(228, 228, 228, 0.9058823529);
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 0px 10px 10px 0px;
+  color: #e4e4e4;
+}
+.form__login {
+  transform: translateX(0);
+  transition: transform 0.6s ease;
+  transition-delay: 0.6s;
+}
+.form__register {
+  transform: translateX(600px);
+  transition: transform 0.6s ease;
+  transition-delay: 0s;
+}
+.form__login-active {
+  transform: translateX(600px);
+  transition: transform 0.6s ease;
+  transition-delay: 0s;
+}
+.form__register-active {
+  transform: translateX(0);
+  transition: transform 0.6s ease;
+  transition-delay: 0.6s;
+}
+.form__title {
+  font-size: 3rem;
+  text-align: center;
+}
+.form__box {
+  position: relative;
+  width: 340px;
+  height: 40px;
+  margin: 30px 0;
+  border-bottom: 2px solid #e4e4e4;
+}
+.form__input {
+  width: 100%;
+  height: 100%;
+  padding-right: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #e4e4e4;
+  font-weight: 500;
+}
+.form__input::-moz-placeholder {
+  color: #e4e4e4;
+}
+.form__input::placeholder {
+  color: #e4e4e4;
+}
+.form__error {
+  margin-top: 0.7em;
+  font-size: 12px;
+}
+.form__error-bottom {
+  border-bottom: 2px solid #bd0909;
+}
+.form__correct {
+  border-bottom: 2px solid #08703f;
+}
+.form__icon {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  margin-left: 40px;
+  font-size: 19px;
+}
+.form__remember {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 0 1em;
+  font-size: 14px;
+  font-weight: 500;
+}
+.form__checkbox {
+  margin-right: 3px;
+  accent-color: #e4e4e4;
+}
+.form__remember-link {
+  color: #e4e4e4;
+  text-decoration: none;
+}
+.form__remember-link:hover {
+  text-decoration: underline;
+}
+.form__btn {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 4px;
+  color: #e4e4e4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgb(28, 65, 13);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.form__btn:hover {
+  background-color: rgb(32, 71, 16);
+}
+.form__btn:focus {
+  outline: none;
+  background-color: rgb(22, 48, 12);
+}
+.form__registers {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 14px;
+}
+.form__login-link, .form__register-link {
+  color: #e4e4e4;
+  font-weight: 600;
+  text-decoration: none;
+}
+.form__login-link:hover, .form__register-link:hover {
+  text-decoration: underline;
+}
+.form__succes {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.8rem;
+  color: rgb(38, 83, 20);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+  .form__box {
+    width: 320px;
+  }
+}
+@media (max-width: 768px) {
+  .bgc {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("../img/small-blur-leaf.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .content__title {
+    font-size: 5rem;
+  }
+  .form__box {
+    width: 100%;
+  }
+}
+@media (max-width: 568px) {
+  .content {
+    display: none;
+  }
+  .box {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .form__box {
+    width: 330px;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  .form__box {
+    width: 260px;
+  }
+}/*# sourceMappingURL=main.css.map */

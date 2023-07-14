@@ -1,0 +1,67 @@
+@use "colors" as *;
+@media (max-width: 1024px) {
+	.container {
+		width: 90%;
+	}
+
+	.form {
+		&__box {
+			width: 320px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+
+	.bgc {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		background: url("../img/small-blur-leaf.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.content {
+		&__title {
+			font-size: 5rem;
+		}
+	}
+
+	.form {
+		&__box {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 568px) {
+	.content {
+		display: none;
+	}
+
+	.box {
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+	}
+
+	.form {
+		&__box {
+			width: 330px;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.container {
+		width: 100%;
+		height: 100%;
+	}
+	.form {
+		&__box {
+			width: 260px;
+		}
+	}
+}
