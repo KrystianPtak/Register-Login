@@ -208,7 +208,7 @@ body {
 .form__login-link:hover, .form__register-link:hover {
   text-decoration: underline;
 }
-.form__succes {
+.form__succes, .form__success {
   margin-top: 1em;
   text-align: center;
   font-size: 1.8rem;
