@@ -5,7 +5,6 @@ const formRegister = document.querySelector(".form__register");
 const btnLogin = document.querySelector(".form__login-btn");
 const btnRegister = document.querySelector(".form__register-btn");
 
-
 loginLink.addEventListener("click", () => {
 	formLogin.classList.add("form__login-active");
 	formRegister.classList.add("form__register-active");
@@ -28,7 +27,6 @@ const checkUsername = () => {
 		username.parentElement.classList.remove("form__error-bottom");
 		username.parentElement.classList.add("form__correct");
 	}
-	updateErrorCount();
 };
 
 const checkEmail = (form) => {
@@ -51,7 +49,6 @@ const checkEmail = (form) => {
 		emailInput.parentElement.classList.add("form__correct");
 		emailInput.parentElement.querySelector(".form__error").textContent = "";
 	}
-	updateErrorCount();
 };
 
 const checkPassword = (form) => {
@@ -67,12 +64,13 @@ const checkPassword = (form) => {
 		passwordInput.parentElement.classList.add("form__correct");
 		passwordInput.parentElement.querySelector(".form__error").textContent = "";
 	}
-	updateErrorCount();
 };
 
 const succes = document.querySelector(".form__succes");
+const success = document.querySelector(".form__success");
 
 const updateErrorCount = () => {
+
 	const allInputs = document.querySelectorAll(".form__input");
 	let errorCount = 0;
 
@@ -83,12 +81,14 @@ const updateErrorCount = () => {
 	});
 	if (errorCount === 0) {
 		succes.style.opacity = "1";
+		success.style.opacity="1";
 		setTimeout(() => {
-			clearBtn(), (succes.style.opacity = "0");
+			clearBtn(), (succes.style.opacity = "0"),(success.style.opacity="0");
 		}, 3000);
 		console.log("0 błędów");
 	} else {
 		succes.style.opacity = "0";
+		success.style.opacity="0";
 		console.log("błąd");
 	}
 };
@@ -115,4 +115,5 @@ btnLogin.addEventListener("click", (e) => {
 	e.preventDefault();
 	checkPassword(formLogin);
 	checkEmail(formLogin);
+	updateErrorCount();
 });
