@@ -147,10 +147,10 @@ body {
   font-size: 12px;
 }
 .form__error-bottom {
-  border-bottom: 2px solid #bd0909;
+  border-bottom: 2px solid #b12e2e;
 }
 .form__correct {
-  border-bottom: 2px solid #08703f;
+  border-bottom: 2px solid rgba(10, 168, 94, 0.7725490196);
 }
 .form__icon {
   position: absolute;
@@ -165,6 +165,12 @@ body {
   margin: 2em 0 1em;
   font-size: 14px;
   font-weight: 500;
+}
+.form__remember-error {
+  color: #b12e2e;
+}
+.form__remember-correct {
+  color: white;
 }
 .form__checkbox {
   margin-right: 3px;
@@ -208,7 +214,7 @@ body {
 .form__login-link:hover, .form__register-link:hover {
   text-decoration: underline;
 }
-.form__succes, .form__success {
+.form__LogInSuccess, .form__RegisterSuccess {
   margin-top: 1em;
   text-align: center;
   font-size: 1.8rem;

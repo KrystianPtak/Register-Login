@@ -4,6 +4,7 @@ const formLogin = document.querySelector(".form__login");
 const formRegister = document.querySelector(".form__register");
 const btnLogin = document.querySelector(".form__login-btn");
 const btnRegister = document.querySelector(".form__register-btn");
+const formLabel = document.querySelector(".form__label");
 
 loginLink.addEventListener("click", () => {
 	formLogin.classList.add("form__login-active");
@@ -66,11 +67,21 @@ const checkPassword = (form) => {
 	}
 };
 
-const succes = document.querySelector(".form__succes");
-const success = document.querySelector(".form__success");
+const checkBox = () => {
+	const formCheckBox = document.querySelector("#terms");
+
+	if (!formCheckBox.checked) {
+		formLabel.classList.add("form__remember-error");
+		formLabel.classList.remove("form__remember-correct");
+	} else {
+		formLabel.classList.add("form__remember-correct");
+		formLabel.classList.remove("form__remember-error");
+	}
+};
 
 const updateErrorCount = () => {
-
+	const LogInSuccess = document.querySelector(".form__LogInSuccess");
+	const RegisterSuccess = document.querySelector(".form__RegisterSuccess");
 	const allInputs = document.querySelectorAll(".form__input");
 	let errorCount = 0;
 
@@ -78,18 +89,21 @@ const updateErrorCount = () => {
 		if (input.parentElement.classList.contains("form__error-bottom")) {
 			errorCount++;
 		}
+		if (formLabel.classList.contains("form__remember-error")) {
+			errorCount++;
+		}
 	});
 	if (errorCount === 0) {
-		succes.style.opacity = "1";
-		success.style.opacity="1";
+		LogInSuccess.style.opacity = "1";
+		RegisterSuccess.style.opacity = "1";
 		setTimeout(() => {
-			clearBtn(), (succes.style.opacity = "0"),(success.style.opacity="0");
+			clearBtn(),
+				(LogInSuccess.style.opacity = "0"),
+				(RegisterSuccess.style.opacity = "0");
 		}, 3000);
-		console.log("0 błędów");
 	} else {
-		succes.style.opacity = "0";
-		success.style.opacity="0";
-		console.log("błąd");
+		LogInSuccess.style.opacity = "0";
+		RegisterSuccess.style.opacity = "0";
 	}
 };
 
@@ -109,6 +123,7 @@ btnRegister.addEventListener("click", (e) => {
 	checkEmail(formRegister);
 	checkPassword(formRegister);
 	updateErrorCount();
+	checkBox();
 });
 
 btnLogin.addEventListener("click", (e) => {

@@ -159,10 +159,10 @@ body {
 	}
 
 	&__error-bottom {
-		border-bottom: 2px solid #bd0909;
+		border-bottom: 2px solid #b12e2e;
 	}
 	&__correct {
-		border-bottom: 2px solid #08703f;
+		border-bottom: 2px solid #0aa85ec5;
 	}
 
 	&__icon {
@@ -179,6 +179,14 @@ body {
 		margin: 2em 0 1em;
 		font-size: 14px;
 		font-weight: 500;
+	}
+
+	&__remember-error {
+		color: #b12e2e;
+	}
+
+	&__remember-correct {
+		color: white;
 	}
 
 	&__checkbox {
@@ -233,8 +241,8 @@ body {
 		}
 	}
 
-	&__succes,
-	&__success {
+	&__LogInSuccess,
+	&__RegisterSuccess {
 		margin-top: 1em;
 		text-align: center;
 		font-size: 1.8rem;
