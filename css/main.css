@@ -100,12 +100,12 @@ body {
   transition-delay: 0.6s;
 }
 .form__register {
-  transform: translateX(600px);
+  transform: translateX(100%);
   transition: transform 0.6s ease;
   transition-delay: 0s;
 }
 .form__login-active {
-  transform: translateX(600px);
+  transform: translateX(100%);
   transition: transform 0.6s ease;
   transition-delay: 0s;
 }
@@ -256,6 +256,10 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+  }
+  .form {
+    -webkit-backdrop-filter: unset;
+            backdrop-filter: unset;
   }
   .form__box {
     width: 330px;

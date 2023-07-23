@@ -54,8 +54,9 @@ const checkEmail = (form) => {
 
 const checkPassword = (form) => {
 	const passwordInput = form.querySelector(".form__password");
+	// const trimmedPassword = passwordInput.value.trim();
 
-	if (passwordInput.value.length < 6) {
+	if (passwordInput.value.trim().length< 6) {
 		passwordInput.parentElement.classList.add("form__error-bottom");
 		passwordInput.parentElement.querySelector(".form__error").textContent =
 			"Min 6 characters";
