@@ -47,6 +47,7 @@
 	}
 
 	.form {
+		-webkit-backdrop-filter:unset;
 		backdrop-filter: unset;
 		&__box {
 			width: 330px;
