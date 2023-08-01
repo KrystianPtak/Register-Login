@@ -1,6 +1,6 @@
 # Register&Login
 
-https://ephemeral-meringue-86b6f0.netlify.app/
+https://krystianptak.pl/Login-register/
 <br>
 
 The following elements were used in this project:
